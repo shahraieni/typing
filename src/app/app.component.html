@@ -6,11 +6,13 @@
       <h1  class="title has-test-centered">
         Typing Challenege
     </h1>
-        <p class="has-test-centered">{{randomText}}</p>
+        <p class="has-test-centered">
+          <span   [class]="comparm(letter , inputText[i])"   *ngFor="let letter of randomText.split('') ; let i = index">{{letter}}</span>
+        </p>
     <div class="field">
-      <input type="text"  class="input">
+      <input type="text"  class="input"    (input)="onChangeInput($event.target.value)" >
     </div>
-    <div  class="box  has-test-centered">
+    <div   *ngIf="randomText === inputText"  class="box  has-test-centered">
       <h1 class="title">Success!</h1>
     </div>
     </div>

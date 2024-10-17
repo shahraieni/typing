@@ -9,4 +9,13 @@ import { faker } from '@faker-js/faker'
 })
 export class AppComponent {
   randomText :string = faker.lorem.sentences(1);
+  inputText :string ='';
+
+  onChangeInput(text:string){
+     this.inputText = text 
+  }
+  comparm(LetterRandom:string , LetterEnter :string) :string{
+   if(!LetterEnter)return 'pending'
+    return LetterRandom === LetterEnter?"succss" :"error"
+  }
 }

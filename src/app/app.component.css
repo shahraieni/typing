@@ -1,0 +1,13 @@
+.succss{
+    color: #55ce55;
+    font-weight: bold;
+}
+
+.error{
+    color: red;
+    font-weight: bolder;
+}
+
+.pending{
+    color: rgb(39, 39, 39);
+}
